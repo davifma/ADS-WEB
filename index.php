@@ -1,4 +1,4 @@
 <?php
-	$variavel = "simples";
+	$variavel = "simples! ola mundo!";
 	echo "Aqui vai rolar o chat $variavel !";
 ?>
