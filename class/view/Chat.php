@@ -3,9 +3,8 @@
 		public function solicitarUsuario(){
 			
 		}
-		public function mostrarChat(){
-			echo "O chat será mostrado aqui";
-			
+		public function mostrarChat(string $msg){
+			echo "A mensagem é ".$msg;	
 		}
 	}
 ?>

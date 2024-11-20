@@ -65,7 +65,7 @@
 			<?php
 				require("class/view/Chat.php");
 				$sala = new Chat();
-				$sala->mostrarChat();
+				$sala->mostrarChat("Vamos ver se funciona");
 			?>
         </div>
         <form id="input-area">
