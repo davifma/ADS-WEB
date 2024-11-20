@@ -63,8 +63,9 @@
         <div id="message-area">
             <!-- As mensagens serão exibidas aqui -->
 			<?php
-				$variavel = "simples! ola mundo!";
-				echo "Aqui vai rolar o chat $variavel !";
+				require("class/view/Chat.php");
+				$sala = new Chat();
+				$sala->mostrarChat();
 			?>
         </div>
         <form id="input-area">
