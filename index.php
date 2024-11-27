@@ -63,13 +63,20 @@
         <div id="message-area">
             <!-- As mensagens serão exibidas aqui -->
 			<?php
+				session_start();
 				require("class/view/Chat.php");
 				$sala = new Chat();
-				$sala->mostrarChat("Vamos ver se funciona");
+				
+				if(isset($_POST["message-input"])){	
+					$_SESSION["msg".count($_SESSION)]= $_POST["message-input"];
+				}
+				if(isset($_SESSION)){
+					$sala->mostrarChat($_SESSION);
+				}
 			?>
         </div>
-        <form id="input-area">
-            <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+        <form id="input-area" method="post">
+            <input type="text" id="message-input" name="message-input"  placeholder="Digite sua mensagem...">
             <input id="send-button" type="submit" value="enviar">
         </form>
     </div>
